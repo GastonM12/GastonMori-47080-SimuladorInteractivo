@@ -129,27 +129,32 @@ function reserva() {
           seleccionDeDia
         );
         let diaDeLaSemana = semana[fechaDelTurno.getDay()];
-        let seleccionDeHora = Number(
-          prompt(
-            `Los horarios que estan disponibles para es dia son: ${calcualdorDeHoras(
-              diaDeLaSemana
-            )}`
-          )
-        );
-        if (calcualdorDeHoras(diaDeLaSemana) === "Domingo") {
+        if (diaDeLaSemana === "Domingo") {
           alert(calcualdorDeHoras(diaDeLaSemana));
-        } else if (calcualdorDeHoras(diaDeLaSemana).includes(seleccionDeHora)) {
-          let indiceDeHorario = horarios.indexOf(seleccionDeHora);
-          let indiceFecha = objetoMes.dias.indexOf(
-            objetoMes.dias.find((e) => e.dia === seleccionDeDia)
+        }
+        if (diaDeLaSemana !== "Domingo") {
+          let seleccionDeHora = Number(
+            prompt(
+              `Los horarios que estan disponibles para es dia son: ${calcualdorDeHoras(
+                diaDeLaSemana
+              )}`
+            )
           );
-          objetoMes.dias[indiceFecha].horasLaborales.splice(indiceDeHorario, 1);
-
-          alert(
-            `El turno ah sido confirmado para el ${fechaDelTurno.toLocaleDateString()} a las ${seleccionDeHora}hs Los proximos turnos disponibles para el dia ${fechaDelTurno.toLocaleDateString()} son ${
-              objetoMes.dias[indiceFecha].horasLaborales
-            } `
-          );
+          if (calcualdorDeHoras(diaDeLaSemana).includes(seleccionDeHora)) {
+            let indiceDeHorario = horarios.indexOf(seleccionDeHora);
+            let indiceFecha = objetoMes.dias.indexOf(
+              objetoMes.dias.find((e) => e.dia === seleccionDeDia)
+            );
+            objetoMes.dias[indiceFecha].horasLaborales.splice(
+              indiceDeHorario,
+              1
+            );
+            alert(
+              `El turno ah sido confirmado para el ${fechaDelTurno.toLocaleDateString()} a las ${seleccionDeHora}hs Los proximos turnos disponibles para el dia ${fechaDelTurno.toLocaleDateString()} son ${
+                objetoMes.dias[indiceFecha].horasLaborales
+              } `
+            );
+          }
         }
       } else {
         alert(`La fecha del turno seleccionado no existe`);
