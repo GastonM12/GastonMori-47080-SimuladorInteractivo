@@ -110,6 +110,7 @@ function reserva() {
   let seleccionDeTurno = prompt(
     `Eliga el mes que desea solicitar el turno ${meses}`
   ).toLowerCase();
+
   while (seleccionDeTurno.toUpperCase() != "ESC") {
     let diasDelMesElegido = [];
     calculadorDeDias(meses[meses.indexOf(seleccionDeTurno)]).forEach(
@@ -117,15 +118,15 @@ function reserva() {
     );
     if (calendarioAnual.some((e) => e.mes == seleccionDeTurno)) {
       let objetoMes = calendarioAnual.find((e) => e.mes === seleccionDeTurno);
-      let diaSeleccionado = Number(
+      let seleccionDeDia = Number(
         prompt(`Seleccione uno de los dias disponibles ${diasDelMesElegido}`)
       );
 
-      if (objetoMes.dias.some((e) => e.dia === diaSeleccionado)) {
+      if (objetoMes.dias.some((e) => e.dia === seleccionDeDia)) {
         let fechaDelTurno = new Date(
           anio,
           meses.indexOf(seleccionDeTurno),
-          diaSeleccionado
+          seleccionDeDia
         );
         let diaDeLaSemana = semana[fechaDelTurno.getDay()];
         let seleccionDeHora = Number(
@@ -140,7 +141,7 @@ function reserva() {
         } else if (calcualdorDeHoras(diaDeLaSemana).includes(seleccionDeHora)) {
           let indiceDeHorario = horarios.indexOf(seleccionDeHora);
           let indiceFecha = objetoMes.dias.indexOf(
-            objetoMes.dias.find((e) => e.dia === diaSeleccionado)
+            objetoMes.dias.find((e) => e.dia === seleccionDeDia)
           );
           objetoMes.dias[indiceFecha].horasLaborales.splice(indiceDeHorario, 1);
 
