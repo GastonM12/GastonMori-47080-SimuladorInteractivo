@@ -1,0 +1,138 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 720px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #0d0c12, #0f0e15, #111018, #13111a, #15131d, #171621, #1a1824, #1c1a28, #201e2e, #252234, #29263b, #2e2a41);
+}
+.tituloPrincipal{
+ color: white;
+}
+#formulario{
+    width: 450px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: rgba(255, 255, 255, 0.01) 1px solid;
+    box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.25);
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.111), transparent)  
+}
+.tituloInputFecha{
+    margin-top: 10px;
+    color: white;
+}
+.tituloInputHora{
+    margin-top: 10px;
+    color: white;
+}
+#inputFecha{
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    color: white;
+    border: rgba(255, 255, 255, 0.01) 1px solid;
+    box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.25);
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    background: linear-gradient(rgba(255, 255, 255, 0.111), transparent)
+}
+#inputFecha:hover{
+    cursor: pointer;
+}
+.seccionHorarios{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tarjeta{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+    justify-content: center;
+    align-content: center;
+}
+.verde{
+    margin-top:7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 700px;
+    border: rgba(255, 255, 255, 0.01) 1px solid;
+    box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.25);
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    background: linear-gradient(rgba(255, 255, 255, 0.111), transparent)
+}
+.rojo{
+    margin-top:7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 700px;
+    border: rgba(255, 255, 255, 0.01) 1px solid;
+    box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.25);
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    background: linear-gradient(rgba(255, 255, 255, 0.111), transparent)
+}
+p{
+    margin-left: 10px;
+}
+.btnEnviar{
+width: 200px;
+height: 40px;
+margin-top: 12px;
+color: white;
+border: rgba(255, 255, 255, 0.01) 1px solid;
+box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.25);
+-webkit-border-radius: 15px;
+border-radius: 15px;
+background: linear-gradient(rgba(255, 255, 255, 0.111), transparent)
+}
+.btnEnviar:hover{
+    cursor: pointer;
+    -moz-transform: scale(1.1) translate(0px, -5px);
+    -webkit-transform: scale(1.1) translate(0px, -5px);
+    -o-transform: scale(1.1) translate(0px, -5px);
+    -ms-transform: scale(1.1) translate(0px, -5px);
+    transform: scale(1.1) translate(0px, -5px);
+    transition-duration: 300ms;
+    
+}
+.containerCheck{
+    width: 70px;
+    height: 50px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    border: rgba(255, 255, 255, 0.01) 1px solid;
+box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.25);
+-webkit-border-radius: 15px;
+border-radius: 15px;
+background: linear-gradient(rgba(255, 255, 255, 0.111), transparent)
+}
+.containerCheck:hover{
+    -moz-transform: scale(1.1) translate(0px, -5px);
+    -webkit-transform: scale(1.1) translate(0px, -5px);
+    -o-transform: scale(1.1) translate(0px, -5px);
+    -ms-transform: scale(1.1) translate(0px, -5px);
+    transform: scale(1.1) translate(0px, -5px);
+    transition-duration: 300ms;
+}
+.containerCheck .typeCheck:hover{
+    cursor: pointer;
+}
