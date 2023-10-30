@@ -57,16 +57,7 @@ function calcualdorDeHoras(diaDeLaSemana) {
     horarios.splice(5, 5);
     return horarios;
   } else if (diaDeLaSemana === "Domingo") {
-    return Swal.fire({
-      icon: 'info',
-      title: 'Los dias Domingo permanecemos cerrado',
-      backdrop: `
-      
-      -webkit-border-radius: 15px;
-      border-radius: 15px;
-      background: linear-gradient(rgba(255, 255, 255, 0.511), transparent)
-  `
-    })
+    return creadorDeTarjeta("Los domingos permanecemos cerrado","rojo")
 
   } else {
     return horarios;
