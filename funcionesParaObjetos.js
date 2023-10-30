@@ -36,7 +36,7 @@ function calculadorDeDias(valor) {
   ];
   if (valor === "febrero") {
     cantidadDeDias.splice(28, 3);
-   
+   return cantidadDeDias
   } else if (
     valor === "abril" ||
     valor === "junio" ||
@@ -44,7 +44,7 @@ function calculadorDeDias(valor) {
     valor === "noviembre"
   ) {
     cantidadDeDias.pop();
-    
+    return cantidadDeDias
   } else {
     return cantidadDeDias;
   }
@@ -57,7 +57,17 @@ function calcualdorDeHoras(diaDeLaSemana) {
     horarios.splice(5, 5);
     return horarios;
   } else if (diaDeLaSemana === "Domingo") {
-    return creadorDeTarjeta( "Los domingo permanecemos cerrado","rojo");
+    return Swal.fire({
+      icon: 'info',
+      title: 'Los dias Domingo permanecemos cerrado',
+      backdrop: `
+      
+      -webkit-border-radius: 15px;
+      border-radius: 15px;
+      background: linear-gradient(rgba(255, 255, 255, 0.511), transparent)
+  `
+    })
+
   } else {
     return horarios;
   }
